@@ -141,7 +141,7 @@ case $1 in
 				echo "Resourcepacks:"
 				ls resourcepacks
 			;;
-			*) echo "Usage: [ add/del/ls ]"
+			*) echo "Usage: -rp [ add/del/ls ]"
 		esac
 	;;
 	"-dp")
@@ -166,7 +166,7 @@ case $1 in
 				echo "Datapacks:"
 				ls saves/$PE1E/datapacks
 			;;
-			*) echo "Usage: [ add/del/ls ]"
+			*) echo "Usage: -dp [ add/del/ls ]"
 		esac
 	;;
 	"-w")
@@ -180,7 +180,7 @@ case $1 in
 				echo "Worlds:"
 				ls saves
 			;;
-			*)
+			*) echo "Usage: -w [ del/ls ]"
 		esac
 	;;
 	"-l")
@@ -199,13 +199,14 @@ case $1 in
 				echo "Logs:"
 				ls logs
 			;;
-			*) echo "Usage: [ show/del/ls ]"
+			*) echo "Usage: -l [ show/del/ls ]"
 		esac
 	;;
 	"-cl")
 		cat logs/latest.log | pbcopy
 	;;
 	"-c")
+		echo "Crash Reports:"
 		ls crash-reports
 	;;
 	"-h")
